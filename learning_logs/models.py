@@ -15,7 +15,7 @@ class Topic(models.Model):
 class Entry(models.Model):
     """Something specific learned about a topic"""
     topic = models.ForeignKey(Topic, on_delete=models.DO_NOTHING)  # must add on_delete
-    text = models.TextField()
+    text = models.TextField(default='Lessons learned')
     date_added = models.DateTimeField(auto_now_add=True)
 
     class Meta:
