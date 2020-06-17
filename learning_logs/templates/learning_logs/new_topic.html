@@ -7,7 +7,6 @@
     <form action="{% url 'learning_logs:new_topic' %}" method="POST">
         {% csrf_token %}    {% comment %}  Prevents unauthorized access to server. {% endcomment %}
         {{ form.as_p }}     {% comment %}  renders form elements in paragraph format {% endcomment %}
-        {% endcomment %}
         <button name="submit">Add topic</button>
     </form>
 

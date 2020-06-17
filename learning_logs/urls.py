@@ -10,5 +10,11 @@ urlpatterns = [
     url(r'^topics/$', views.topics, name = 'topics'),
 
     #Details page for a single topic
-    url(r'^topics/(?P<topic_id>\d+)/$', views.topic, name='topic')  # matches integer between 2 slashes and stores it in topic_id
+    url(r'^topics/(?P<topic_id>\d+)/$', views.topic, name='topic'),  # matches integer between 2 slashes and stores it in topic_id
+
+    # Page for adding a new topic
+    url(r'^new_topic/$', views.new_topic, name='new_topic'),
+
+    # Page for adding a new entry
+    url(r'^new_entry/(P<topic_id>\d+)/$', views.new_entry, name='new_entry'),
 ]
